@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "target": "ESNext",
+      "outDir": "./dist",
+      "baseUrl": "./src",
+      "module": "CommonJS",
+      "experimentalDecorators": true
+    },
+    "include": [
+      "src/**/*.ts"
+, "src/interfaces/requestWithUser.interface.ts", "src/controller/diseases", "src/controller/injuries"    ],
+    "exclude": [
+      "node_modules"
+    ],
+
+    "ts-node": {
+      "swc": true
+    }
+}
