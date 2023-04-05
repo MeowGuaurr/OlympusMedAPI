@@ -5,52 +5,60 @@ const diseaseLogschema = new mongoose.Schema({
   athlete: {
     ref: 'User',
     type: mongoose.Schema.Types.ObjectId,
+    required: true,
   },
   sport: {
     ref: 'Sports',
     type: mongoose.Schema.Types.ObjectId,
+    required: true,
   },
   event: {
     ref: 'Events',
     type: mongoose.Schema.Types.ObjectId,
+    required: true,
   },
   diagnostic: String,
   afectedSystem: {
     ref: 'Diseases',
     type: mongoose.Schema.Types.ObjectId,
+    required: true,
   },
   mainSymptoms: {
     ref: 'Symptoms',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
   cause: {
-    ref: 'Causes',
+    ref: 'CausesOfDisease',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
   mainTreatment: {
     ref: 'Treatments',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
   reference: {
     ref: 'References',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
-  absenceTime: {
-    ref: 'Evaluations',
-    type: mongoose.Schema.Types.ObjectId,
-  },
+  absenceTime: String,
   recomendations: {
     ref: 'Recomendations',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
   createdAt: Date,
   createdBy: {
     ref: 'User',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
   updatedBy: {
     ref: 'User',
     type: mongoose.Schema.Types.ObjectId,
+    //required: true,
   },
 })
 

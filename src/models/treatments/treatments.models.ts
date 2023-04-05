@@ -4,7 +4,13 @@ import fieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
 const treatmentsSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    unique: true
+  },
+  code: {
+    type: Number,
+    required: true,
+    unique: true
   },
   active: Boolean,
   createdBy: {

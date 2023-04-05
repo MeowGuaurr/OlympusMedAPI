@@ -12,6 +12,11 @@ const injuriesSchema = new mongoose.Schema({
     unique: true
   },
   active: Boolean,
+  createdAt: Date,
+  createdBy: {
+    ref: 'User',
+    type: mongoose.Schema.Types.ObjectId,
+  },
 });
 
 const injuriesModel = mongoose.model<injuriesInterface & mongoose.Document>('Injuries', injuriesSchema);

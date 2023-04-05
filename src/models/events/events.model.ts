@@ -6,6 +6,7 @@ const eventsSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  code: Number,
   active: Boolean,
   createdBy: {
     ref: 'User',

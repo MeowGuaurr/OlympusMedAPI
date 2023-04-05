@@ -9,7 +9,7 @@
     },
     "include": [
       "src/**/*.ts"
-, "src/interfaces/requestWithUser.interface.ts", "src/controller/diseases", "src/controller/injuries"    ],
+, "src/interfaces/requestWithUser.interface.ts", "src/controller/diseases", "src/controller/injuries", "src/controller/common"    ],
     "exclude": [
       "node_modules"
     ],
