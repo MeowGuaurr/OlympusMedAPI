@@ -1,12 +1,7 @@
-interface countriesInterface{
+import commonInterface from "interfaces/commonInterface";
+
+interface countriesInterface extends Omit<commonInterface, 'code'>{
   _id: string;
-  name: string;
-  active: boolean;
-  createdBy: string;
-  createdAt: Date;
-  updatedBy: string;
-  updatedAt: Date;
-  code: number;
 }
 
 export default countriesInterface;

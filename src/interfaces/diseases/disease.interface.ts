@@ -1,11 +1,3 @@
-interface diseaseInterface{
-  name: string;
-  code: number;
-  active: boolean;
-  createdBy: string;
-  createdAt: Date;
-  updatedBy: string;
-  updatedAt: Date;
-}
+import commonInterface from "interfaces/commonInterface";
 
-export default diseaseInterface;
+export default interface diseaseInterface extends commonInterface{}

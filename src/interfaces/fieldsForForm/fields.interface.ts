@@ -1,12 +1,6 @@
-interface fieldstInterface{
-  _id: string;
-  name: string;
-  code: number;
-  active: boolean;
-  createdBy: string;
-  createdAt: Date;
-  updatedBy: string;
-  updatedAt: Date;
-}
 
-export default fieldstInterface;
+import commonInterface from "interfaces/commonInterface";
+
+export default interface fieldstInterface extends commonInterface{
+  _id: string;
+}
