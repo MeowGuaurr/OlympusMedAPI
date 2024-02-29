@@ -6,7 +6,6 @@ import recomendationsModel from "../../models/recomendations/recomendations.mode
 import sportModel from "../../models/sports/sports.model";
 import RequestWithUser from "interfaces/requestWithUser.interface";
 import authMiddleware from "../../middleware/auth.middleware";
-import NotAuthorizedException from "../../exceptions/NotAuthorizedException";
 import createNewDto from "../../validators/createNew.dto";
 import UpdateDto from "../../validators/Update.dto";
 import createNew from "../../utils/createNew";

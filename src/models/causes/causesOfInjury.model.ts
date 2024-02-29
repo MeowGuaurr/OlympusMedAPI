@@ -1,24 +1,8 @@
 import * as mongoose from 'mongoose';
 import fieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
+import { commonSchema } from 'models/common.model';
 
-const causesOfInjurySchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  active: Boolean,
-  createdBy: {
-    ref: 'User',
-    type: mongoose.Schema.Types.ObjectId,
-  },
-  createdAt: Date,
-  updatedBy: {
-    ref: 'User',
-    type: mongoose.Schema.Types.ObjectId,
-  },
-  updatedAt: Date,
-});
+const causesOfInjurySchema = commonSchema.clone()
 
 const causesOfInjuryModel = mongoose.model<fieldsInterface & mongoose.Document>('CausesofInjury', causesOfInjurySchema);
 

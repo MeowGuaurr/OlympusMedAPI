@@ -1,29 +1,15 @@
 import * as mongoose from 'mongoose';
 import fieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
+import { commonSchema } from 'models/common.model';
 
-const referencesSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
+const referencesSchema = commonSchema.clone()
+referencesSchema.add({
   code: {
     type: Number,
     required: true,
     unique: true
-  },
-  active: Boolean,
-  createdBy: {
-    ref: 'User',
-    type: mongoose.Schema.Types.ObjectId,
-  },
-  createdAt: Date,
-  updatedBy: {
-    ref: 'User',
-    type: mongoose.Schema.Types.ObjectId,
-  },
-  updatedAt: Date,
+  }
 });
-
 const referencesModel = mongoose.model<fieldsInterface & mongoose.Document>('References', referencesSchema);
 
 export default referencesModel;
