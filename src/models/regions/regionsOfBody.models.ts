@@ -1,9 +1,9 @@
 import * as mongoose from 'mongoose';
-import fieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
+import FieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
 import { commonSchema } from 'models/common.model';
 
 const regionsOfBodySchema = commonSchema.clone()
 
-const regionsOfBodyModel = mongoose.model<fieldsInterface & mongoose.Document>('RegionsOfBody', regionsOfBodySchema);
+const regionsOfBodyModel = mongoose.model<FieldsInterface & mongoose.Document>('RegionsOfBody', regionsOfBodySchema);
 
 export default regionsOfBodyModel;

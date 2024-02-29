@@ -1,5 +1,5 @@
 import * as mongoose from "mongoose";
-import diseaseInterface from "../../interfaces/diseases/disease.interface";
+import DiseaseInterface from "../../interfaces/diseases/disease.interface";
 import { commonSchema } from "models/common.model";
 
 const diseaseSchema = commonSchema.clone()
@@ -11,6 +11,6 @@ diseaseSchema.add({
   }
 });
 
-const diseasesModel = mongoose.model<diseaseInterface & mongoose.Document>('Diseases', diseaseSchema);
+const diseasesModel = mongoose.model<DiseaseInterface & mongoose.Document>('Diseases', diseaseSchema);
 
 export default diseasesModel;

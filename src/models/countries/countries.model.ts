@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import fieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
+import FieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
 import { commonSchema } from 'models/common.model';
 
 const countriesSchema = commonSchema.clone()
@@ -11,6 +11,6 @@ countriesSchema.add({
   }
 });
 
-const countriesModel = mongoose.model<fieldsInterface & mongoose.Document>('Countries', countriesSchema);
+const countriesModel = mongoose.model<FieldsInterface & mongoose.Document>('Countries', countriesSchema);
 
 export default countriesModel

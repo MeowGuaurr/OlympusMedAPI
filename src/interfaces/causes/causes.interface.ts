@@ -1,3 +1,3 @@
-import commonInterface from "interfaces/commonInterface";
+import CommonInterface from "interfaces/commonInterface";
 
-export default interface causesInterface extends commonInterface{}
+export default interface CausesInterface extends CommonInterface{}

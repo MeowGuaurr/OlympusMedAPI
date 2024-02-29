@@ -1,7 +1,7 @@
-import commonInterface from "interfaces/commonInterface";
+import CommonInterface from "interfaces/commonInterface";
 
-interface countriesInterface extends Omit<commonInterface, 'code'>{
+interface CountriesInterface extends Omit<CommonInterface, 'code'>{
   _id: string;
 }
 
-export default countriesInterface;
+export default CountriesInterface;

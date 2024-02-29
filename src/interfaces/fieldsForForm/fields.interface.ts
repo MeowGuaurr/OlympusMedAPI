@@ -1,6 +1,6 @@
 
-import commonInterface from "interfaces/commonInterface";
+import CommonInterface from "interfaces/commonInterface";
 
-export default interface fieldstInterface extends commonInterface{
+export default interface FieldstInterface extends CommonInterface{
   _id: string;
 }

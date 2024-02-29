@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import commonInterface from 'interfaces/commonInterface';
+import CommonInterface from 'interfaces/commonInterface';
 
 export const commonSchema = new mongoose.Schema({
   name: {
@@ -19,5 +19,5 @@ export const commonSchema = new mongoose.Schema({
   updatedAt: Date,
 });
 
-export const commonModel = mongoose.model<commonInterface & mongoose.Document>('Common', commonSchema);
+export const commonModel = mongoose.model<CommonInterface & mongoose.Document>('Common', commonSchema);
 

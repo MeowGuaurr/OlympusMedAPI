@@ -1,4 +1,4 @@
-interface commonInterface{
+interface CommonInterface{
     name: string;
     code: number;
     active: boolean;
@@ -8,4 +8,4 @@ interface commonInterface{
     updatedAt: Date;
   }
   
-  export default  commonInterface;
+  export default  CommonInterface;

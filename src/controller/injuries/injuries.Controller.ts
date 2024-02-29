@@ -1,7 +1,7 @@
 import * as express from 'express';
-import injuriesInterface from '../../interfaces/injuries/injuries.interface';
-import fieldstInterface from '../../interfaces/fieldsForForm/fields.interface';
-import injuryLogInterface from '../../interfaces/injuries/injuryLog.interface';
+import InjuriesInterface from '../../interfaces/injuries/injuries.interface';
+import FieldstInterface from '../../interfaces/fieldsForForm/fields.interface';
+import InjuryLogInterface from '../../interfaces/injuries/injuryLog.interface';
 import validationMiddleware from '../../validators/middleware.validator';
 import CreateInjuriesDto from '../../validators/injuries.dto';
 import createNewDto from '../../validators/createNew.dto';
@@ -36,12 +36,12 @@ class InjuriesController{
   }
 
   private createInjuries(req: RequestWithUser, res: express.Response, next: express.NextFunction){
-    const injuriesData: injuriesInterface = req.body;
+    const injuriesData: InjuriesInterface = req.body;
     createNew(req, res, injuriesModel, injuriesData, next);
   }
 
   private createInjuryLog = async(req: RequestWithUser, res: express.Response, next: express.NextFunction) => {
-    const DiseaseLogData : injuryLogInterface = req.body;
+    const DiseaseLogData : InjuryLogInterface = req.body;
     const user = await userModel.findOne({_id: req.user._id});
     const userInfo = await user.populate('createdBy', '-password');
 
@@ -95,17 +95,17 @@ class InjuriesController{
   }
 
   private createCause(req: RequestWithUser, res: express.Response, next: express.NextFunction){
-    const newData: fieldstInterface = req.body;
+    const newData: FieldstInterface = req.body;
     createNew(req, res, causesOfInjuryModel, newData, next);
   }
 
   private createRegion(req: RequestWithUser, res: express.Response, next: express.NextFunction){
-    const regionData: fieldstInterface = req.body;
+    const regionData: FieldstInterface = req.body;
     createNew(req, res, regionsOfBodyModel, regionData, next)
   }
 
   private createActivity(req: RequestWithUser, res: express.Response, next: express.NextFunction){
-    const activityData: fieldstInterface = req.body;
+    const activityData: FieldstInterface = req.body;
     createNew(req, res, activitiesModel, activityData, next)
   }
 

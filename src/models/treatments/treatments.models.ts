@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import fieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
+import FieldsInterface from '../../interfaces/fieldsForForm/fields.interface';
 import { commonSchema } from 'models/common.model';
 
 const treatmentsSchema = commonSchema.clone()
@@ -11,6 +11,6 @@ treatmentsSchema.add({
   }
 });
 
-const treatmentsModel = mongoose.model<fieldsInterface & mongoose.Document>('Treatments', treatmentsSchema);
+const treatmentsModel = mongoose.model<FieldsInterface & mongoose.Document>('Treatments', treatmentsSchema);
 
 export default treatmentsModel;

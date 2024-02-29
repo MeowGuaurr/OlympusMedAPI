@@ -1,4 +1,4 @@
-interface injuryLogInterface{
+interface InjuryLogInterface{
   _id: string;
   athlete: string;
   athleteId: string;
@@ -18,4 +18,4 @@ interface injuryLogInterface{
   updatedBy: string;
 }
 
-export default injuryLogInterface;
+export default InjuryLogInterface;

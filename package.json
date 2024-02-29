@@ -11,6 +11,7 @@
   "author": "Reyna Galan | MeowGuaurr",
   "license": "ISC",
   "dependencies": {
+    "@jridgewell/trace-mapping": "^0.3.23",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.0",
     "class-transformer": "^0.5.1",

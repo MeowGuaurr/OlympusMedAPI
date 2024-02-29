@@ -1,5 +1,5 @@
 import * as mongoose from "mongoose"
-import injuryLogInterface from "../../interfaces/injuries/injuryLog.interface"
+import InjuryLogInterface from "../../interfaces/injuries/injuryLog.interface"
 
 const injuryLogSchema = new mongoose.Schema({
   athlete: {
@@ -66,6 +66,6 @@ const injuryLogSchema = new mongoose.Schema({
   },
 });
 
-const injuryLogModel = mongoose.model<injuryLogInterface & mongoose.Document>('InjuriesLog', injuryLogSchema);
+const injuryLogModel = mongoose.model<InjuryLogInterface & mongoose.Document>('InjuriesLog', injuryLogSchema);
 
 export default injuryLogModel;

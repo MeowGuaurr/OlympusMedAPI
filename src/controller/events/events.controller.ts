@@ -5,7 +5,7 @@ import authMiddleware from '../../middleware/auth.middleware';
 import validationMiddleware from '../../validators/middleware.validator';
 import createCountryDto from '../../validators/createCountry.dto';
 import RequestWithUser from '../../interfaces/requestWithUser.interface';
-import fieldstInterface from '../../interfaces/fieldsForForm/fields.interface';
+import FieldstInterface from '../../interfaces/fieldsForForm/fields.interface';
 import UpdateDto from '../../validators/Update.dto';
 import createNew from '../../utils/createNew';
 import UpdateDataWCode from '../../utils/updateData';
@@ -28,7 +28,7 @@ class EventsController{
   }
 
   public createEvent = async (req: RequestWithUser, res: express.Response, next: express.NextFunction) => {
-    const eventData: fieldstInterface = req.body;
+    const eventData: FieldstInterface = req.body;
     createNew(req, res, eventsModel, eventData, next)
   }
 

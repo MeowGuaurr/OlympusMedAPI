@@ -8,9 +8,9 @@ import symptomsModel from '../../models/symptoms/symptoms.model';
 import userModel from '../../models/users/user.models';
 import causesOfDiseaseModel from '../../models/causes/causesOfDisease.models'
 import RequestWithUser from '../../interfaces/requestWithUser.interface';
-import fieldstInterface from '../../interfaces/fieldsForForm/fields.interface';
-import diseaseInterface from '../../interfaces/diseases/disease.interface';
-import diseaseLogInterface from '../../interfaces/diseases/diseaseLog.interface';
+import FieldstInterface from '../../interfaces/fieldsForForm/fields.interface';
+import DiseaseInterface from '../../interfaces/diseases/disease.interface';
+import DiseaseLogInterface from '../../interfaces/diseases/diseaseLog.interface';
 import authMiddleware from '../../middleware/auth.middleware';
 import diseaseLogModel from '../../models/diseases/diseaseLog.model';
 import NotAuthorizedException from '../../exceptions/NotAuthorizedException';
@@ -40,22 +40,22 @@ class DiseaseController{
 
 
   private createDisease = async (req: RequestWithUser, res: express.Response, next: express.NextFunction) =>{
-    const diseaseData: diseaseInterface = req.body;
+    const diseaseData: DiseaseInterface = req.body;
     createNew(req, res, diseasesModel, diseaseData, next)
   }
 
   private createSymptom = async (req: RequestWithUser, res: express.Response, next: express.NextFunction) =>{
-    const symptomData: fieldstInterface = req.body;
+    const symptomData: FieldstInterface = req.body;
     createNew(req, res, symptomsModel, symptomData, next);
   }
 
   private createCause = async (req: RequestWithUser, res: express.Response, next: express.NextFunction) =>{
-    const causeData: fieldstInterface = req.body;
+    const causeData: FieldstInterface = req.body;
     createNew(req, res, causesOfDiseaseModel, causeData, next);
   }
 
   private createDiseaseLog = async (req: RequestWithUser, res: express.Response, next: express.NextFunction) => {
-    const DiseaseLogData : diseaseLogInterface = req.body;
+    const DiseaseLogData : DiseaseLogInterface = req.body;
     const user = await this.user.findOne({_id: req.user._id});
     const userInfo = await user.populate('createdBy', '-password');
 

@@ -1,4 +1,4 @@
-interface diseaseLogInterface {
+interface DiseaseLogInterface {
   _id: string;
   athlete: string;
   athleteId: string;
@@ -18,4 +18,4 @@ interface diseaseLogInterface {
   updatedBy: string;
 }
 
-export default diseaseLogInterface;
+export default DiseaseLogInterface;

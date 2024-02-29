@@ -5,7 +5,7 @@ import createCountryDto from '../../validators/createCountry.dto';
 import authMiddleware from '../../middleware/auth.middleware';
 import validationMiddleware from '../../validators/middleware.validator';
 import RequestWithUser from '../../interfaces/requestWithUser.interface';
-import countriesInterface from '../../interfaces/countries/countries.interface';
+import CountriesInterface from '../../interfaces/countries/countries.interface';
 import UpdateDto from '../../validators/Update.dto';
 import createNew from '../../utils/createNew';
 import UpdateDataWCode from '../../utils/updateData';
@@ -28,7 +28,7 @@ class CountryController{
   }
 
   public createCountry = async (req: RequestWithUser, res: express.Response, next: express.NextFunction) => {
-    const countryData: countriesInterface = req.body;
+    const countryData: CountriesInterface = req.body;
     createNew(req, res, countriesModel, countryData, next)
   }
 
