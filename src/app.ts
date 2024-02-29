@@ -48,9 +48,6 @@ class App{
 
   private connectToTheDatabase() {
     const{
-      MONGO_USER,
-      MONGO_PASSWORD,
-      MONGO_PATH,
       MONGO_URI
     } = process.env;
     mongoose.connect(MONGO_URI)
