@@ -75,7 +75,7 @@ class AuthController{
     }
   }
 
-  private loggingOut = (req: express.Request, res: express.Response) => {
+  private readonly loggingOut = (req: express.Request, res: express.Response) => {
     res.setHeader('Set-Cookie', ['Authorization=;Max-age=0']);
     res.sendStatus(200);
   }
@@ -113,7 +113,7 @@ class AuthController{
     })
   }
 
-  private updateUser = async (req: RequestWithUser, res: express.Response) => {
+  private readonly updateUser = async (req: RequestWithUser, res: express.Response) => {
     const userData: UpdateUserDto = req.body;
     const user = await this.user.findOne({_id: req.user._id});
     const userInfo = await user.populate('email','-password');
