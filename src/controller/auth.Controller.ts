@@ -19,7 +19,7 @@ import authMiddleware from '../middleware/auth.middleware';
 class AuthController{
   public path = '/auth'
   public router = express.Router();
-  private user = userModel;
+  private readonly user = userModel;
 
   constructor() {
     this.initializeRoutes();
