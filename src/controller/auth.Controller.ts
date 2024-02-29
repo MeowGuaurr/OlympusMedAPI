@@ -56,7 +56,7 @@ class AuthController{
   }
 
 
-  private logIn = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
+  private readonly logIn = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     const logInData: LogInDto = req.body;
     const user = await this.user.findOne({email: logInData.email});
     if(user){
