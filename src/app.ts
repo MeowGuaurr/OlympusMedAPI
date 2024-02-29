@@ -8,11 +8,9 @@ const cors = require('cors')
 
 class App{
   public app: express.Application;
-  //public port = 3000;
 
   constructor(controllers, port) {
     this.app = express();
-    //this.port = port;
 
     this.connectToTheDatabase();
     this.initializeMiddlewares();
