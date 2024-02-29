@@ -34,7 +34,7 @@ class AuthController{
     this.router.post(`${this.path}/logout`, this.loggingOut);
   }
 
-  private registration = async (req:  RequestWithUser, res: express.Response, next: express.NextFunction) => {
+  private readonly registration = async (req:  RequestWithUser, res: express.Response, next: express.NextFunction) => {
     const userData: CreateUserDto = req.body;
     if(await this.user.findOne({email: userData.email})){
       next(new EmailAlreadyExistsException(userData.email));
