@@ -14,7 +14,7 @@ import UpdateDataWCode from "../../utils/updateData";
 class CommonDataController{
   public path = '/common';
   public router = express.Router();
-  private user = userModel;
+  private readonly user = userModel;
 
   constructor() {
     this.initializeRoutes();
